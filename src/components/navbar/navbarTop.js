@@ -5,7 +5,14 @@ const NavbarTop = () => {
         <>
             <Navbar bg="light" data-bs-theme="light">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <img
+                            src="/logo.png"
+                            // width="48"
+                            // className="d-inline-block align-top"
+                            alt="Logo"
+                        />
+                    </Navbar.Brand>
                     <div className="mx-auto">
                         <Nav className="justify-content-center">
                             <Nav.Link href="/vehicles">Veículos</Nav.Link>
