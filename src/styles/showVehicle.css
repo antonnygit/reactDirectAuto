@@ -1,0 +1,19 @@
+.container-vehicle-show {
+    border: 2px solid var(--bs-border-color);
+    width: 90%;
+    max-width: 1200px;
+}
+
+.remove-p-margin-bottom
+{
+    margin-bottom: 0;
+}
+
+@media (max-width: 993px) {
+    .container-vehicle-show {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

@@ -1,0 +1,19 @@
+.chat-container {
+    height: 90vh;
+    /* background-color: orange; */
+}
+
+main 
+{
+    background-color: rgba(var(--bs-light-rgb));
+}
+
+body 
+{
+    background-color: rgba(var(--bs-light-rgb));
+}
+
+.icon-hover:hover
+{
+    cursor: pointer;
+}

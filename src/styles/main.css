@@ -1,0 +1,10 @@
+.navbar{
+    height: 70px;
+}
+
+.modalAuth{
+    width: 800px;
+    border: 1px solid rgb(211, 211, 211);
+    border-width: 2px;
+    border-radius: 10px;
+}

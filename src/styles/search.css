@@ -1,0 +1,23 @@
+.search-container {
+    border: 2px solid var(--bs-border-color);
+    padding: 13px 30px 13px 30px;
+    max-width: 1000px;
+}
+
+.border-txt {
+    border-color: rgba(var(--bs-danger-rgb)) !important;
+    border-bottom: 3px solid rgba(var(--bs-danger-rgb)) !important;
+}
+
+.txt-decoration-none{
+    text-decoration: none !important;
+}
+
+.border-none{
+    border-left: none !important;
+}
+
+.nav-link:hover{
+    border-bottom: 3px solid rgba(var(--bs-danger-rgb)) !important;
+    border-color: rgba(var(--bs-danger-rgb)) !important;
+}
