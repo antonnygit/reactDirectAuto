@@ -2,6 +2,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import NavbarTop from "../../components/navbar/navbarTop";
 import { useState } from "react";
 import NavbarBottom from "../../components/navbar/navbarBottom";
+import IsAuth from "../../middlewares/isAuth";
 
 const SellVehicle = () => {
     const [step, setStep] = useState(1);
@@ -87,4 +88,4 @@ const SellVehicle = () => {
     )
 }
 
-export default SellVehicle;
+export default IsAuth(SellVehicle);
