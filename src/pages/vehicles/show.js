@@ -35,10 +35,10 @@ const ShowVehicle = () => {
     return (
         <>
             <NavbarTop />
-            <main style={{ height: "100%" }}>
+            <main style={{ height: "100vh" }}>
                 <Container>
                     {loading || error ? (
-                        <div className="d-flex justify-content-center align-items-center">
+                        <div className="d-flex my-5 justify-content-center align-items-center">
                             <Spinner animation="border" variant="danger" />
                         </div>
                     ) : (

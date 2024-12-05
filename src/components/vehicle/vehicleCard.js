@@ -1,5 +1,4 @@
 import { Button, Card } from "react-bootstrap";
-import { Navigate } from "react-router-dom";
 
 const goToVehiclePage = (id) => {
     window.location.href = '/show/' + id;
@@ -9,7 +8,7 @@ const VehicleCard = ({ id, name, model, imgUrl, value, date, km }) => {
 
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={imgUrl} style={{cursor: 'pointer'}} onClick={() => {goToVehiclePage(id)}} />
+            <Card.Img variant="top" src={imgUrl} style={{cursor: 'pointer', width: '288px'}} onClick={() => {goToVehiclePage(id)}} />
             <Card.Body>
                 <Card.Title className="fw-bold text-secondary">{name}</Card.Title>
                 <Card.Subtitle className="fw-bolder text-body-tertiary text-truncate">{model}</Card.Subtitle>

@@ -67,7 +67,7 @@ const Vehicle = () => {
                     <Search />
                 </div>
 
-                <div className="pt-5" style={{ height: "100%" }}>
+                <div className="pt-5" style={{ height: "100vh" }}>
 
                     <div className="d-flex flex-wrap gap-4 mb-5 justify-content-center align-items-center">
                         {loadingVehicles ? (
