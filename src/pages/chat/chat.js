@@ -5,6 +5,7 @@ import '../../styles/chat.css';
 
 import Conversation from "../../components/chat/conversation";
 import ChatConversation from "../../components/chat/chat";
+import IsAuth from "../../middlewares/isAuth";
 
 const Chat = ({ userToChat }) => {
     return (
@@ -109,4 +110,4 @@ const Chat = ({ userToChat }) => {
     )
 }
 
-export default Chat;
+export default IsAuth(Chat);
