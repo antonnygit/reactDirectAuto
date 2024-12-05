@@ -1,4 +1,12 @@
+import AxiosInstance from "../axios";
 
-const register = () => {}
+const RegisterService = (name, email, password) => {
+    const data = {
+        "name": name,
+        "email": email,
+        "password": password
+    }
+    return AxiosInstance.post('/register', data);
+}
 
-export default register;
+export default RegisterService;

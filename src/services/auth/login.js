@@ -7,7 +7,7 @@ const LoginService = (email, password) => {
     }
 
     return AxiosInstance.post(
-        'auth/login',
+        '/login',
         data
     );
 }
