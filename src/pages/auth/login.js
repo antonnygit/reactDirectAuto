@@ -3,7 +3,11 @@ import NavbarBottom from "../../components/navbar/navbarBottom";
 import NavbarTop from "../../components/navbar/navbarTop";
 import ModalLogin from "../../components/auth/modalLogin";
 
+const isLogged = !!localStorage.getItem('token');
+
 const Login = () => {
+    if(isLogged) window.location.href = '/vehicles';
+
     return (
         <>
             <NavbarTop />
