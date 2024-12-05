@@ -1,6 +1,13 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 
 const NavbarTop = () => {
+    const isLogged = !!localStorage.getItem('token');
+
+    const handleLogout = () => {
+        localStorage.clear();
+        window.location.href = '/login';
+    }
+
     return (
         <>
             <Navbar bg="light" data-bs-theme="light">
@@ -8,8 +15,6 @@ const NavbarTop = () => {
                     <Navbar.Brand href="/">
                         <img
                             src="/logo.png"
-                            // width="48"
-                            // className="d-inline-block align-top"
                             alt="Logo"
                         />
                     </Navbar.Brand>
@@ -20,7 +25,12 @@ const NavbarTop = () => {
                             <Nav.Link href="/chat">Chat</Nav.Link>
                         </Nav>
                     </div>
-                    <Button variant="outline-primary">Login</Button>
+                    {isLogged ? (
+                        <Button variant="outline-danger" onClick={handleLogout}>Sair</Button>
+                    ) : (
+                        <Button variant="outline-primary" href="/login">Login</Button>
+                    )}
+                    
                 </Container>
             </Navbar>
         </>
