@@ -17,3 +17,19 @@ body
 {
     cursor: pointer;
 }
+
+.message{
+    max-width: 70%;
+    width: fit-content;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.message-from {
+    background-color: rgb(214, 212, 212);
+}
+
+.message-my {
+    background-color: rgb(179, 178, 178);
+}

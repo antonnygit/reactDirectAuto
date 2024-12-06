@@ -34,6 +34,11 @@ const ModalLogin = () => {
             const token = response.data.token;
             localStorage.clear();
             localStorage.setItem('token', token);
+            localStorage.setItem('id', response.data.user.id);
+            if (response.data.user.photo)
+            {
+                localStorage.setItem('photo', response.data.user.photo);
+            }
             window.location.href = '/vehicles';
         } catch (err) {
             if (err.response) {

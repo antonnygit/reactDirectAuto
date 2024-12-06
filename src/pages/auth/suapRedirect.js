@@ -25,6 +25,10 @@ const SuapRedirect = () => {
                 const responseSuap = await AuthFromSuapService(nome, email_preferencial, foto);
                 const authToken = responseSuap.data.token;
                 localStorage.setItem('token', authToken);
+                localStorage.setItem('id', responseSuap.data.user.id);
+                if (responseSuap.data.user.photo) {
+                    localStorage.setItem('photo', responseSuap.data.user.photo);
+                }
                 window.location.href = '/vehicles';
             } catch (err) {
                 window.location.href = "/";

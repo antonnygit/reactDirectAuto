@@ -16,6 +16,8 @@ const ShowVehicle = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
+    const userId = localStorage.getItem("id");
+
     useEffect(() => {
         const getVehicle = async () => {
             try {
@@ -56,6 +58,7 @@ const ShowVehicle = () => {
                             </Row>
 
                             <ShowVhc
+                                idUser={vehicle.user_id}
                                 name={vehicle.name}
                                 model={vehicle.model}
                                 value={vehicle.price}

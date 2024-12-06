@@ -2,7 +2,13 @@ import { Button, Col, Row } from "react-bootstrap";
 
 import '../../styles/showVehicle.css';
 
-const ShowVhc = ({ name, model, value, date, km, color, brand, description }) => {
+const ShowVhc = ({ idUser, name, model, value, date, km, color, brand, description }) => {
+    const userId = localStorage.getItem("id");
+
+    const goToChat = () => {
+        window.location.href = '/chat/' + idUser;
+    }
+
     return (
         <div className="mx-auto container-vehicle-show rounded-3 py-4 mb-5">
             <div className="row justify-content-center">
@@ -48,7 +54,7 @@ const ShowVhc = ({ name, model, value, date, km, color, brand, description }) =>
                 <div className="col-lg-5">
                     <h1 className="fw-bold text-danger">R$ {value}</h1>
                     <p className="fw-bold text-secondary">Vendedor</p>
-                    <Button variant='danger' className='fw-bolder form-control text-body-light' type='submit'>Chat com vendedor</Button>
+                    <Button variant='danger' onClick={goToChat} disabled={userId == idUser} className='fw-bolder form-control text-body-light' type='submit'>Chat com vendedor</Button>
                 </div>
 
             </div>

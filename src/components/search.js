@@ -2,21 +2,25 @@ import { Button, Form, Nav } from 'react-bootstrap';
 import './../styles/search.css';
 import { useState } from 'react';
 
-const Search = () => {
+const Search = ({setTabActive}) => {
     const [activeKey, setActiveKey] = useState('#buy');
 
     const handle = (selectedKey) => {
         setActiveKey(selectedKey);
     };
 
+    const setActive = (type) => {
+        setTabActive(type);
+    }
+
     return (
         <div className="search-container mx-auto bg-white">
             <Nav variant="underline" activeKey={activeKey} onSelect={handle} defaultActiveKey="#home">
                 <Nav.Item>
-                    <Nav.Link href="#buy" eventKey="#buy" className={`txt-decoration-none fw-bold ${activeKey === '#buy' ? 'text-dark border-txt' : 'text-secondary'}`}>Comprar carros</Nav.Link>
+                    <Nav.Link href="#buy" eventKey="#buy" onClick={() => {setActive(1)}} className={`txt-decoration-none fw-bold ${activeKey === '#buy' ? 'text-dark border-txt' : 'text-secondary'}`}>Comprar carros</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href='#sell' eventKey="#sell" className={`txt-decoration-none fw-bold ${activeKey === '#sell' ? 'text-dark border-txt' : 'text-secondary'}`}>Quero vender</Nav.Link>
+                    <Nav.Link href='#sell' eventKey="#sell" onClick={() => {setActive(2)}} className={`txt-decoration-none fw-bold ${activeKey === '#sell' ? 'text-dark border-txt' : 'text-secondary'}`}>Quero vender</Nav.Link>
                 </Nav.Item>
             </Nav>
             <Form>
